@@ -1,0 +1,44 @@
+Create a Camping store Database
+/** Camping Store Items:
+Flashlights ($20)
+Tents ($200)
+Chairs ($23)
+Sleeping Bags ($400)
+Fire starters ($5)
+Boots  ($50)
+Pants ($100)
+Shirts ($55)
+Belts ($10)
+Flare ($1)
+Safety Cord ($20)
+Toilet ($35)
+Sand ($10)
+Water ($2)
+Protein Bar ($4)
+**/
+
+CREATE TABLE Camping_Store_Items (id INTEGER PRIMARY KEY, name TEXT, Price INTEGER, Clothes TEXT, Use TEXT, Aisle TEXT); 
+
+INSERT INTO Camping_Store_Items VALUES (1, "Flashlights", "$20", "clothes", "Public Use", "1"); 
+INSERT INTO Camping_Store_Items VALUES (2, "Tents", "$200" ,"Clothes", "Public Use", "1");
+INSERT INTO Camping_Store_Items VALUES (3, "Chairs", "$23", "Clothes", "Public Use", "1");
+INSERT INTO Camping_Store_Items VALUES (4, "Sleeping Bags", "$400", "Clothes", "Personal Use", "2");
+INSERT INTO Camping_Store_Items VALUES (5, "Fire starter", "$5", "Clothes", "Public Use", "1"); 
+INSERT INTO Camping_Store_Items VALUES (6, "Boots", "$50", "Clothes", "Personal Use", "3");
+INSERT INTO Camping_Store_Items Values (7, "Pants", "$100", "Clothes", "Personal Use", "3");
+INSERT INTO Camping_Store_Items VALUES (8, "Shirts", "$55", "Clothes", "Personal Use", "3");
+INSERT INTO Camping_Store_Items VALUES (9, "Belts", "$10", "Clothes", "Personal Use", "3");
+INSERT INTO Camping_Store_Items Values (10, "Flare", "$1", "Clothes", "Public Use", "1");
+INSERT INTO Camping_Store_Items VALUES (11, "Safety Cord", "$20", "Clothes", "Public Use", "1");
+INSERT INTO Camping_Store_Items VALUES (12, "Toilet", "$35", "Clothes", "Public Use", "4");
+INSERT INTO Camping_Store_Items VALUES (13, "Sand", "$10", "Clothes", "Public Use", "1");
+INSERT INTO Camping_Store_Items VALUES (14, "Water", "$2", "Food", "Public Use", "5");
+INSERT INTO Camping_Store_Items VALUES (15, "Protein Bar", "$4", "Food", "Public Use", "5");
+
+ordered the database by ID number
+
+SELECT * FROM Camping_Store_Items ORDER BY ID;
+
+Selected the smallest amount in the Database
+SELECT MIN(Price) FROM Camping_Store_Items; 
+
