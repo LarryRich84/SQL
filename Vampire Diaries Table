@@ -1,0 +1,36 @@
+CREATE TABLE vampire_diaries
+(id INTEGER PRIMARY KEY AUTOINCREMENT,
+first_name TEXT,
+race TEXT, 
+clan TEXT, 
+episode_count INTEGER);
+
+INSERT INTO vampire_diaries VALUES (1, "stefen", "vampire", "salvatore", "451");
+INSERT INTO vampire_diaries VALUES (2, "damon", "vampire", "salvatore", "455");
+INSERT INTO vampire_diaries VALUES (3, "elena", "human", "gilbert", "355");
+INSERT INTO vampire_diaries VALUES (4, "bonnie", "witch", "bennet", "300");
+INSERT INTO vampire_diaries VALUES (5, "kathrine", "vampire", "pierce", "100");
+INSERT INTO vampire_diaries VALUES (6, "jeremy", "human", "gilbert", "200");
+INSERT INTO vampire_diaries VALUES (7, "caroline", "vampire", "forbes", "170");
+ INSERT INTO vampire_diaries VALUES(8, "matt", "human", "donovan", "170");
+INSERT INTO vampire_diaries VALUES (9, "tyler", "werewolf", "lockwood", "140");
+INSERT INTO vampire_diaries VALUES (10, "alaric", "human", "saltzman", "120");
+INSERT INTO vampire_diaries VALUES (11, "enzo", "vampire", "st.john", "70");
+INSERT INTO vampire_diaries VALUES (12, "liz", "human", "forbes", "50");
+CREATE TABLE sires 
+(id INTEGER PRIMARY KEY AUTOINCREMENT,
+first_name TEXT,
+race TEXT,
+clan TEXT);
+
+INSERT INTO sires VALUES (1, "klaus", "vampire", "mikelson");
+INSERT INTO sires VALUES (2, "rebekah", "vampire", "mikelson");
+INSERT INTO sires VALUES (3, "elijah", "vampire", "mikelson");
+
+SELECT * FROM vampire_diaries;
+SELECT * FROM sires;
+
+SELECT* FROM vampire_diaries
+JOIN sires
+ON sires.race = vampire_diaries.race
+GROUP BY vampire_diaries.first_name;
